@@ -7,7 +7,7 @@ class ExponentialSearch{
 			return 0;
 		}
 		int i=1;
-		while(i<lengthOfArray	&&	ar[i]<=key){
+		while(i<lengthOfArray && ar[i]<=key){
 			i*=2;
 		}
 		return Arrays.binarySearch(ar,i/2,Math.min(i,lengthOfArray-1),key);
