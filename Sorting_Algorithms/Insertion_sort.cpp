@@ -22,5 +22,8 @@ int main() {
     return 0;
 }
 /*
-
+    divide array into sorted and unsorted
+    compare current element with elemets of sorted array and insert at specific position
+    and also shift the elements to create space for current element + to fill the void created by
+    current element
 */
