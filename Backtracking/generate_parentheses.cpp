@@ -15,7 +15,6 @@ int main(){
 }
 void generate(string i, int open, int close){
     if(open==0 && close==0){
-        cout<<i<<endl;
         parentheses.push_back(i);
         return;
     }
