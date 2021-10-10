@@ -29,6 +29,7 @@ int binarySearch(vector<int> v, int key, int start, int end){
     return search(v, key, pivot+1, end);
 }
 
+
 int findPivot(vector<int> v,int start, int end){
     if(start<end){
         int mid= start+(end-start)/2;
