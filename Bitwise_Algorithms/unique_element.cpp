@@ -19,3 +19,6 @@ int findUnique(vector<int> v){
     return Unique;
 }
 // there should be only one unique element in Array
+
+//time comlexity= O(n) 
+//space comlexity= O(1) 
