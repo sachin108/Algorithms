@@ -20,6 +20,7 @@ public class StrReverse{
 		Scanner input = new Scanner(System.in);
 		String s=input.nextLine();
 		System.out.println(reverse(s,s.length()-1));
+		input.close();
 	}
 }
 

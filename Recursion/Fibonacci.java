@@ -17,5 +17,6 @@ public class Fibonacci{
 		Scanner in=new Scanner(System.in);
 		int n=in.nextInt();
 		System.out.print(fibonacci(2,n));
+		in.close();
 	}
 }

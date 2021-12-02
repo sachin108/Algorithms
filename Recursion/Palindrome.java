@@ -30,6 +30,7 @@ public class Palindrome{
 
 			System.out.println("no");
 		}
+		input.close();
 	}
 }
 

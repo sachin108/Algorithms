@@ -20,5 +20,6 @@ public class Factorial{
 		Scanner in = new Scanner(System.in);
 		int n=in.nextInt();
 		System.out.println(obj.fact(n));
+		in.close();
 	}
 }

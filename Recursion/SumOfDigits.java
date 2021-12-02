@@ -19,12 +19,12 @@ public class SumOfDigits{
 	}
 
 	public static void main(String[] args) {
-		
 		Scanner input = new Scanner(System.in);
 		System.out.println("enter a number");
 		Integer n=input.nextInt();
 		String x=n.toString();
 		System.out.println("Sum Of Digits = "+sod(n,x.length()));
+		input.close();
 	}
 }
 
