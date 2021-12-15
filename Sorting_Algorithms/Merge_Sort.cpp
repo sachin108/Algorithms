@@ -14,41 +14,43 @@ int main(){
 }
 
 void mergeSort(int array[], int first, int last){
-    if(first>=last)
-    return;
-    int middle=first+(last-first)/2;
-    mergeSort(array, first, middle);
-    mergeSort(array, middle+1, last);
-    merge(array, first, middle, last);
+  if(first<last){
+    int mid=(first+last)/2;
+    mergeSort(array, first, mid);
+    mergeSort(array, mid+1, last);
+    merge(array, first, mid, last);
+  }
 }
 
 void merge(int array[], int first, int middle, int last){
-    int i=first, j=middle+1, k=first;
-    while(i<=middle && j<=last){
-        if(array[i]<=array[j]){
-            int temp=array[k];
-            array[k]=array[j];
-            array[j]=temp;
-            ++j;
-        }
-        else{
-            int temp=array[k];
-            array[k]=array[i];
-            array[i]=temp;
-            ++i;
-        }
-        ++k;
+  int firstArraySize=middle-first+1;
+  int secondArraySize=last-middle;
+  int FirstArray[firstArraySize], SecondArray[secondArraySize];
+  for (int i = 0; i < firstArraySize; i++) {
+    FirstArray[i]=array[first+i];
+  }
+  for (int i = 0; i < secondArraySize; i++) {
+    SecondArray[i]=array[middle+1+i];
+  }
+  int i=0, j=0, k=first;
+
+  while (i<firstArraySize && j<secondArraySize) {
+    if(FirstArray[i]<=SecondArray[j]){
+      array[k]=FirstArray[i];
+      ++i;
     }
-    while(i<=middle){
-            int temp=array[k];
-            array[k]=array[i];
-            array[i]=temp;
-            ++k;    ++i;
+    else{
+      array[k]=SecondArray[j];
+      ++j;
     }
-    while(j<=last){
-            int temp=array[k];
-            array[k]=array[j];
-            array[j]=temp;
-            ++k;    ++j;
-    }
+    ++k;
+  }
+  while (i<firstArraySize) {
+    array[k]=FirstArray[i];
+    ++k; ++i;
+  }
+  while (j<secondArraySize) {
+    array[k]=SecondArray[j];
+    ++k; ++j;
+  }
 }
