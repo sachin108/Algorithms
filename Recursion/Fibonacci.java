@@ -10,7 +10,6 @@ public class Fibonacci{
 			return fibonacci(++m,n);
 		}
 	}
-	
 	public static void main(String[] args){
 		list.add(0.0);
 		list.add(1.0);
