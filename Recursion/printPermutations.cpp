@@ -2,6 +2,7 @@
 #include<string>
 #include<vector>
 using namespace std;
+
 void permutations(string str, string pm, int n){
     if(str.size()==0){
         cout<<pm<<endl;
